@@ -1,4 +1,6 @@
-import MetricList from "@/components/MetricList"
+import MetricList from "@/components/MetricList";
+import Link from "next/link";
+
 const CustomersPage = () => {
   const customerData = [
     {"id": "123", "name": "Acme Corporation", "value": 234576},
@@ -9,7 +11,8 @@ const CustomersPage = () => {
 
   return (
     <div className="flex flex-col p-2 border rounded-md border-gray-300 m-3">
-      <h2 className="text-xl my-2 font-semibold">Top 10 Customers</h2>
+      <h2 className="text-xl my-2 font-semibold">All Customers</h2>
+      <Link className="underline" href="/dashboard/prime">Prime Customers</Link>
       <MetricList data={customerData} />
     </div>
   )
