@@ -1,7 +1,7 @@
-
+import Metrics from "@/components/Metrics";
 const ProfitPage = () => {
   return (
-    <div>ProfitPage</div>
+    <Metrics label="Balance Page" amount={1456785.89} />
   )
 }
 

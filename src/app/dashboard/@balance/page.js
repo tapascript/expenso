@@ -1,7 +1,8 @@
+import Metrics from "@/components/Metrics";
 
 const BalancePage = () => {
   return (
-    <div>BalancePage</div>
+   <Metrics label="Balance Page" amount={1256785.89} />
   )
 }
 
