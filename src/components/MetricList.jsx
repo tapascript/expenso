@@ -5,8 +5,8 @@ const MetricList = ({data}) => {
         <li 
           key={item.id}
           className="p-1 text-xl">
-          <span className="mx-2">{item.name}</span>
-          <span>{new Intl.NumberFormat().format(item.value)}</span>
+          <span className="mx-2">{item.name}</span> { ' - ' }
+          <span className="mx-2">{new Intl.NumberFormat().format(item.value)} {' '} USD</span>
         </li>
       ))}
     </ul>
