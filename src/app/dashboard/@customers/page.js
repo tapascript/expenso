@@ -4,7 +4,7 @@ const CustomersPage = () => {
     {"id": "123", "name": "Acme Corporation", "value": 234576},
     {"id": "456", "name": "Brand Inc", "value":76908},
     {"id": "956", "name": "Cello Corporation", "value": 56786},
-    {"id": "756", "name": "Dellp Corporation", "value": 46789},
+    {"id": "756", "name": "Dellp Corporation", "value": 45678},
   ];
 
   return (
