@@ -1,4 +1,5 @@
 import "../globals.css";
+import { isSuperAdmin } from "@/lib/auth";
 
 export const metadata = {
   title: "Dashboard - Expenso",
@@ -6,6 +7,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, balance, expenses, profit, customers }) {
+  const superAdmin = isSuperAdmin();
+  
   return (
     <div className="flex flex-col h-screen">
       {children}
@@ -14,9 +17,11 @@ export default function RootLayout({ children, balance, expenses, profit, custom
         {expenses} 
         {profit}
       </div>
-      <div>
-        {customers}
-      </div>
+      {
+        superAdmin && (<div>
+          {customers}
+        </div>)
+      }
     </div>
   );
 }
